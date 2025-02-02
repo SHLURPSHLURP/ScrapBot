@@ -1,4 +1,4 @@
-//diorama code line 3-89
+//FOR DIORAMA CODE line 3-89
 
 document.addEventListener("DOMContentLoaded", () => {
     const canvas = document.getElementById("diorama-canvas");
@@ -89,3 +89,44 @@ document.addEventListener("DOMContentLoaded", () => {
   };
  
 
+//FOR MUSIC
+// Function to set up the audio on each page
+function setupAudio() {
+  const audio = document.getElementById("bg-music");
+  if (!audio) return; // If no audio on this page, do nothing
+
+  // Load mute state from localStorage
+  let isMuted = localStorage.getItem("muted") === "true";
+  audio.muted = isMuted;
+
+  // Listen for changes in localStorage (when settings page updates)
+  window.addEventListener("storage", () => {
+      audio.muted = localStorage.getItem("muted") === "true";
+  });
+}
+
+// Function to set up the mute button in the settings page
+function setupMuteButton() {
+  const muteBtn = document.getElementById("mute-toggle");
+  if (!muteBtn) return; // If no mute button on this page, do nothing
+
+  // Load mute state
+  let isMuted = localStorage.getItem("muted") === "true";
+  muteBtn.textContent = isMuted ? "Unmute" : "Mute";
+
+  // Toggle mute state
+  muteBtn.addEventListener("click", () => {
+      isMuted = !isMuted;
+      localStorage.setItem("muted", isMuted);
+      muteBtn.textContent = isMuted ? "Unmute" : "Mute";
+
+      // Trigger event so all pages update
+      window.dispatchEvent(new Event("storage"));
+  });
+}
+
+// Run setup functions when the page loads
+document.addEventListener("DOMContentLoaded", () => {
+  setupAudio();
+  setupMuteButton();
+});
