@@ -28,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
             if (users.length === 0) { //if the email is not found
                 alert("Email not found, Please sign up first! :( ");
             } else if (users[0].password === password) { //if email is found and passsword is correct
-                alert("Login successful! :) ");
                 window.location.href = "../html/index.html"; // redirect to homepage
             } else {
                 alert("Wrong password! :( "); //password wrong
