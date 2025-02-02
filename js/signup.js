@@ -3,8 +3,8 @@
 
 //[STEP 0]: Make sure our document is A-OK
 document.addEventListener("DOMContentLoaded", function () {
-    const APIKEY = "679ef932d24ab46410dcca54";
-    const RESTDBURL = "https://scrapbot-bead.restdb.io/rest/contact";
+    const APIKEY = "679f63fe74defacf0a181f2b";
+    const RESTDBURL = "https://scrapbot-e2fb.restdb.io/rest/contact";
 
     document.getElementById("signup-submit").addEventListener("click", function (e) {
         // Prevent default action of the button

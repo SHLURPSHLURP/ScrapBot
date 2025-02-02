@@ -2,8 +2,8 @@
 
 //[STEP 0]: Make sure our document is A-OK
 document.addEventListener("DOMContentLoaded", function () {
-    const APIKEY = "679ef932d24ab46410dcca54";
-    const RESTDBURL = "https://scrapbot-bead.restdb.io/rest/contact";
+    const APIKEY = "679f63fe74defacf0a181f2b";
+    const RESTDBURL = "https://scrapbot-e2fb.restdb.io/rest/contact";
 
     document.getElementById("contact-submit").addEventListener("click", function (e) {
         // Prevent default action of the button
@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (users.length === 0) { //if the email is not found
                 alert("Email not found, Please sign up first! :( ");
             } else if (users[0].password === password) { //if email is found and passsword is correct
+                alert("Login successful! :) ");
                 window.location.href = "../html/index.html"; // redirect to homepage
             } else {
                 alert("Wrong password! :( "); //password wrong
@@ -39,4 +40,3 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
-
