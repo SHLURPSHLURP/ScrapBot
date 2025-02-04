@@ -126,7 +126,48 @@ function setupMuteButton() {
 }
 
 // Run setup functions when the page loads
+
 document.addEventListener("DOMContentLoaded", () => {
+  console.log("Page Loaded. Running setup...");
+
   setupAudio();
   setupMuteButton();
+  setupIntroAnimation();
 });
+
+function setupIntroAnimation() {
+    console.log("Playing intro animation...");
+  
+    const title = document.getElementById("intro-text");
+    const scrapbotLogo = document.getElementById("scrapbot-page-logo");
+    const nextButton = document.querySelector(".next-link");
+  
+    setTimeout(() => {
+        if (title) {
+            title.style.visibility = "visible";
+            title.style.opacity = "1";
+        }
+    }, 1000);
+  
+    setTimeout(() => {
+        if (title) {
+            title.style.opacity = "0";
+        }
+    }, 4000);
+  
+    setTimeout(() => {
+        if (scrapbotLogo) {
+            scrapbotLogo.style.visibility = "visible";
+            scrapbotLogo.style.opacity = "1";
+        }
+    }, 5000);
+  
+    setTimeout(() => {
+        if (nextButton) {
+            nextButton.style.visibility = "visible";
+            nextButton.style.opacity = "1";
+        }
+    }, 7000);
+  }
+  
+  
