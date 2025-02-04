@@ -4,7 +4,17 @@
 document.addEventListener("DOMContentLoaded", function () {
     const APIKEY = "679f63fe74defacf0a181f2b";
     const RESTDBURL = "https://scrapbot-e2fb.restdb.io/rest/contact";
-
+  
+    // sign in as guest//
+    const guestBtn = document.getElementById("guest-signin");
+    if (guestBtn) {
+        guestBtn.addEventListener("click", () => {
+            alert("Signed in as Guest!");
+            window.location.href = "index.html"; 
+        });
+    }
+  });
+    
     document.getElementById("contact-submit").addEventListener("click", function (e) {
         // Prevent default action of the button
         e.preventDefault(); 
@@ -38,4 +48,3 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("An error occurred, Please try again! :( ");
         });
     });
-});
