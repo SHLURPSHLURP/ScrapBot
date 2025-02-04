@@ -1,4 +1,116 @@
-img{
-    width:50px;
-    height:auto;
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;700&display=swap');
+
+/* General Styling */
+body {
+    font-family: 'Kaisei Decol', serif;    
+    text-align: center;
+    background: #f4f4f4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden; 
+    width: 100%;
 }
+
+img {
+    width: 50px;
+    height: auto;
+}
+#scrapbot-logo {
+    width:300px
+}
+/* Fullscreen Pages */
+.intro-page, .scrapbot-page, .signin-page {
+    background: black;
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Fade-in Elements */
+#intro-text, #scrapbot-page-logo, .next-link {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 2s ease-in-out;
+}
+
+#intro-text {
+    font-size: 3rem;
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#scrapbot-page-logo {
+    width: 300px;
+}
+
+/* Buttons */
+.next-link, .btn {
+    display: inline-block;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: background 0.3s;
+    margin-top: 20px;
+}
+
+.next-link:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.btn {
+    font-size: 1.2rem;
+    background: lightgray;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+/* Sign-in Form */
+.signin-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 90%;
+    max-width: 300px;
+}
+
+.signin-form input, .signin-form button, .guest-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    border: none;
+}
+
+.signin-form input {
+    background: #222;  
+    color: blue;
+    outline: none;
+}
+
+.signin-form button, .guest-btn {
+    background: lightgray;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.signin-form button:hover, .guest-btn:hover {
+    background: gray;
+}
+
