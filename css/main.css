@@ -27,7 +27,9 @@ body {
 
 .top-nav {
     display: flex;
-    background: #f9c978; 
+    justify-content: space-between; 
+    align-items: center;
+    background: #f9c978;
     padding: 10px 15px;
     width: 100%;
     position: fixed;
@@ -37,6 +39,10 @@ body {
     z-index: 1000;
 }
 
+.top-nav li {
+    display: flex;
+    align-items: center;
+}
 .top-nav .profile {
     display: flex;
     align-items: center;
@@ -47,6 +53,11 @@ body {
     width: 40px;
     border-radius: 50%;
 }
+#profile-and-user {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
 
 .nav-icons {
     display: flex;
@@ -54,24 +65,24 @@ body {
     gap: 10px;
 }
 
-.nav-icons img {
-    width: 30px;
+.settings, #scraps {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
 }
+
 
 #scrap-counter {
     display: flex;
     align-items: center;
-    gap: 5px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 5px; 
     font-weight: bold;
+    text-align: center;
 }
 
-#scraps {
-    width: 30px;
-}
-
-.settings {
-    width: 30px;
-}
 img {
     width: 50px;
     height: auto;
