@@ -125,6 +125,7 @@ function setupMuteButton() {
   });
 }
 
+
 // Run setup functions when the page loads
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -132,16 +133,48 @@ document.addEventListener("DOMContentLoaded", () => {
 
   setupAudio();
   setupMuteButton();
-  setupIntroAnimation();
-});
 
+    if (document.querySelector(".prologue-page")) {
+      setupPrologue(); 
+  } else if (document.querySelector(".intro-page")) {
+      setupIntroAnimation(); 
+  }
+});
+//prologue
+function setupPrologue() {
+  console.log("Prologue started...");
+
+  const prologueTexts = [
+      "After a mysterious attack devastates humanity, the world falls into an eerie silence. Cities stand empty, roads crumble, and nature slowly reclaims what was once hers. Only small creatures scurry through the ruins, the last remnants of life.",
+      "Deep within the wreckage, a lone, damaged robot stirs to life. Somehow, against all logic, it has become sentient. Confused yet determined, it stumbles into a nearby warehouse, scavenging metal scraps to repair itself.",
+      "With newfound purpose, the robot chooses a name—ScrapBot. And with its joints tightened and circuits humming, it sets off into the vast, empty world, searching for something it doesn’t yet understand: companionship."
+  ];
+
+  let currentTextIndex = 0;
+  const prologueTextElement = document.getElementById("prologue-text");
+  const nextButton = document.getElementById("next-button");
+
+  nextButton.addEventListener("click", function(event) {
+      event.preventDefault();
+
+      currentTextIndex++;
+
+      if (currentTextIndex < prologueTexts.length) {
+          prologueTextElement.innerHTML = prologueTexts[currentTextIndex];
+      } else {
+          console.log("Prologue finished. Redirecting to intro...");
+          window.location.href = "start.html"; //Go to intro animation after prologue
+      }
+  });
+}
+// code for intro animation
 function setupIntroAnimation() {
     console.log("Playing intro animation...");
   
     const ssssLogo = document.getElementById("ssss-logo");
     const title = document.getElementById("intro-text");
     const scrapbotLogo = document.getElementById("scrapbot-page-logo");
-    const nextButton = document.querySelector(".next-link");
+    const nextButton = document.querySelector(".intro-next-link");
     
     setTimeout(() => {
       if (ssssLogo) {

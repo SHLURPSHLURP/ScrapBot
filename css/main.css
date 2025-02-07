@@ -39,9 +39,87 @@ img {
     justify-content: center;
     align-items: center;
 }
+/*prologue */
+.prologue-page {
+    background: url('../images/grassbg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; 
+    padding-bottom: 10vh; 
+}
+
+/* prologue text box*/
+.prologue-overlay {
+    width:100%;
+    max-width: 900px; 
+    background: rgba(0, 0, 0, 0.9); 
+    padding: 25px;
+    border-radius: 15px;
+    text-align: left;
+    color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-weight: normal;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#prologue-text {
+    font-size: 1.3rem;
+    text-align: left; 
+    font-weight: normal;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+}
+
+/* prologue click to continue button */
+.next-link {
+    display: block;
+    text-align: right;
+    margin-top: 15px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s, text-decoration 0.3s;
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+}
+
+.next-link:hover {
+    background: rgba(255, 255, 255, 0.4);
+    text-decoration: underline;
+}
+
+/* intro animation click to continue button */
+.intro-next-link:hover {
+    text-decoration: underline;
+}
+
+.intro-next-link {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: opacity 1s ease-in-out, text-decoration 0.3s;
+    margin-top: 30px;
+    visibility: hidden;
+    opacity: 0;
+}
 
 /* Fade-in */
-#intro-text, #scrapbot-page-logo, #ssss-logo, .next-link {
+#intro-text, #scrapbot-page-logo, #ssss-logo, .intro-next-link {
     opacity: 0;
     visibility: hidden;
     transition: opacity 2s ease-in-out;
@@ -68,8 +146,8 @@ img {
     width: 300px;
 }
 
-/* Buttons */
-.next-link {
+/* intro animation buttons */
+.intro-next-link {
     font-size: 1.5rem;
     text-decoration: none;
     color: white;
@@ -77,7 +155,7 @@ img {
     border: none;
     cursor: pointer;
     transition: opacity 0.3s;
-    margin-top: 20px;
+    margin-top: 30px;
     visibility: hidden;
     opacity: 0;
 }
