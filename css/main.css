@@ -1,17 +1,77 @@
 @import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;700&display=swap');
 
 /* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    font-family: 'Kaisei Decol', serif;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden; 
+    background: white;  
+}
 body {
     font-family: 'Kaisei Decol', serif;    
     text-align: center;
-    background: #f4f4f4;
+    background: white;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     overflow-x: hidden; 
     width: 100%;
+    padding-top: 60px;
 }
 
+.top-nav {
+    display: flex;
+    background: #f9c978; 
+    padding: 10px 15px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 80px;
+    z-index: 1000;
+}
+
+.top-nav .profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#profile-pic {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-icons img {
+    width: 30px;
+}
+
+#scrap-counter {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: bold;
+}
+
+#scraps {
+    width: 30px;
+}
+
+.settings {
+    width: 30px;
+}
 img {
     width: 50px;
     height: auto;
@@ -28,6 +88,7 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 30px;
 }
 /* intro Page */
 .intro-page {
@@ -142,8 +203,12 @@ img {
     transform: translate(-50%, -50%);
 }
 
-#scrapbot-page-logo {
-    width: 300px;
+#scrapbot-page-logo, #scrapbot-options-logo {
+    position: absolute;  
+    top: 38%;  
+    left: 50%;
+    transform: translate(-50%, -50%);  
+    width: 300px;  
 }
 
 /* intro animation buttons */
@@ -158,7 +223,40 @@ img {
     margin-top: 30px;
     visibility: hidden;
     opacity: 0;
+    position: absolute;
+    left: auto;
+    top: 60%;
 }
+
+.next-link:hover {
+    text-decoration: underline;
+}
+.btn-container {
+    display: flex;
+    justify-content: center; 
+    position: absolute;
+    gap: 40px;
+    left: 50%;
+    top: 70%; 
+    transform: translate(-50%, -50%);
+}
+.btn {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: background 0.3s;
+    border: none;
+    cursor: pointer;
+}
+.btn:hover {
+    background: rgb(84, 130, 255);;
+}
+
+
+/* Sign-in page */
 
 .forgot-password {
     color: white;
@@ -169,27 +267,6 @@ img {
     background: none;
 
 }
-.next-link:hover {
-    text-decoration: underline;
-}
-
-.btn {
-    display: inline-block;
-    font-size: 1.5rem;
-    text-decoration: none;
-    color: white;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 10px 15px;
-    border-radius: 10px;
-    transition: background 0.3s;
-    margin-top: 20px;
-}
-.btn:hover {
-    background: rgb(84, 130, 255);;
-}
-
-
-/* Sign-in Form */
 .signin-form {
     display: flex;
     flex-direction: column;
@@ -225,4 +302,157 @@ img {
 .signin-form button:hover, .guest-btn:hover {
     background: rgb(84, 130, 255);;
 }
+
+/* episode select */
+.episode-select-page {
+    background: url('../images/grassbg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    width: 100vw;
+    min-height: 100vh;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.chapter-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    max-width: 800px;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.chapter-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 350px;
+    height: 100%;
+    min-height: 680px;
+    justify-content: space-between;
+}
+
+.chapter-card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* thumbnail */
+.thumbnail, .locked {
+    position: relative;
+    width: 320px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Chapter image */
+.chapter-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* overlay */
+.chapter-overlay, .locked{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+/* game Logo */
+.game-logo {
+    width: 150px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+/* titles & descriptions */
+.chapter-select-title {
+    font-size: 2rem; 
+    font-weight: bold;
+    margin-bottom: 20px; 
+    text-align: center;
+}
+.chapter-title {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+.header-container {
+    background: white;  
+    width: 100%;
+    position: relative;
+    z-index: 10;  
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+}
+.section-divider {
+    width: 100%;
+    height: 10px;
+    background: white;
+    margin-bottom: -5px;
+}
+.title-separator {
+    width: 50%;
+    height: 2px;
+    background: black;
+    margin: 5px auto;
+    display: block;
+}
+.chapter-section {
+    background: url('../images/grassbg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.chapter-description {
+    min-height: 100px;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+/* Play Button */
+.play-button {
+    display: block;
+    margin-top: auto;
+    padding: 10px 15px;
+    background: #ff9431;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    width: 80%;
+}
+
+.play-button:hover { background: #ffad61; }
 

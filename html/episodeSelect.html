@@ -1,34 +1,37 @@
 <!DOCTYPE html> <!--html boilerplate-->
-<html> <!--this file is the episode select page-->
+<html lang="en"> <!--this file is the episode select page-->
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>ScrapBot - Chapter Select</title>
+</head>
 
-    <head> <!--metadata and title-->
-        <link rel="stylesheet" href="../css/normalize.css">
-        <link rel="stylesheet" href="../css/main.css">
+<body>
 
-        <title>ScrapBot</title>
-    </head>
-
-    <body>
-
+    
         <!--music-->
         <audio id="bg-music" loop autoplay>
             <source src="../music/episodeTheme.mp3" type="audio/mpeg">
         </audio>
 
-        <!--navigation bar at the top-->
+    <!-- top navbar -->
+        <div class="header-container">
+        <!-- Navigation Bar -->
         <nav>
             <ul class="top-nav">
                 <div id="profile-and-user">
-                    <li><img src="../images/profilePic.png" alt="profile picture" id="profile-pic"></li> <!--"profile" picture-->
-                    <li id="user">ScrapBot</li>
+                    <li><img src="../images/profilePic.png" alt="profile picture" id="profile-pic"></li>
+                    <li id="user">Shlersphlerp</li>
                 </div>
 
                 <div id="scrap-counter">
-                    <li><img src="../images/scraps.png" alt="scraps" id="scraps"></li> 
-                    <li id="scrap-number">50</li>
+                    <li><img src="../images/scraps.png" alt="scraps" id="scraps"></li>
+                    <li id="scrap-number">50 Scraps</li>
                 </div>
 
-                <li>                    
+                <li>
                     <a href="settings.html">
                         <img src="../images/settings.png" alt="settings" class="settings">
                     </a>
@@ -36,51 +39,73 @@
             </ul> 
         </nav>
 
+        <!-- Chapter select title -->
+        <h1 class="chapter-select-title">Chapter Select</h1>
+    </div>
+    
+    <!-- WHITE SECTION DIVIDER -->
+    <div class="section-divider"></div>
 
-      <ul id="episode-select-block">
-        <div class="episode-block">
-            <li><img src="../images/chapterimg.png" alt="chapter one picture" class="chapter-image"></li>
-            <li>Chapter One: ScrapBot takes his first journey out of the warehouse.</li>
+    <!-- CHAPTER SELECTION (Background starts here) -->
+    <div class="chapter-section">
+        <div class="chapter-container">
+            
+            <!-- Chapter 1 -->
+            <div class="chapter-card">
+                <img src="../images/niericon.png" alt="NieR: Automata" class="game-logo">
+                <div class="thumbnail">
+                    <img src="../images/chapter1.jpg" alt="Chapter 1" class="chapter-img">
+                    <div class="chapter-overlay">
+                        <h2>Chapter 1</h2>
+                    </div>
+                </div>
+                <h3 class="chapter-title">A New Companion?</h3>
+                <div class="title-separator"></div>
+                <p class="chapter-description">Amidst the ruins, ScrapBot wanders alone, until it finds something. A broken machine, barely functional. With nothing but scraps, can it fix what’s left?</p>
+                <a href="chapter1.html" class="play-button">Read Now</a>
+            </div>
+
+            <!-- Chapter 2 -->
+            <div class="chapter-card">
+                <img src="../images/leagueicon.png" alt="League" class="game-logo">
+                <div class="thumbnail">
+                    <img src="../images/chapter2.jpg" alt="Chapter 2" class="chapter-img">
+                    <div class="chapter-overlay">
+                        <h2>Chapter 2</h2>
+                    </div>
+                </div>
+                <h3 class="chapter-title">First Steps</h3>
+                <div class="title-separator"></div>
+                <p class="chapter-description">Short Stubby is functional, but far from fixed. As ScrapBot continues repairs, it begins to wonder, what now? The world is vast, empty, and full of unknown dangers. Maybe it's time to leave the warehouse.</p>
+                <a href="chapter2.html" class="play-button">Read Now</a>
+            </div>
+
+            <!-- Chapter 3 Locked -->
+            <div class="chapter-card">
+                <div class="thumbnail">
+                    <!-- replace img-->
+                    <img src="../images/chapter3.png" alt="Locked" class="chapter-img">
+                    <div class="chapter-overlay">
+                        <h2>Chapter 3</h2>
+                    </div>
+                </div>
+                <p class="chapter-description"><em>Locked! Play previous chapters to unlock.</em></p>
+            </div>
+
+            <!-- Chapter 4 Upcoming -->
+            <div class="chapter-card">
+                <div class="thumbnail">
+                    <!-- replace img-->
+                    <img src="../images/chapter4.png" alt="Locked" class="chapter-img">
+                    <div class="chapter-overlay">
+                        <h2>Chapter 4</h2>
+                    </div>
+                </div>
+                <p>Releases on <strong>Feb 20</strong></p>
+            </div>
+
         </div>
+    </div>
 
-        <div class="episode-block">
-            <li class="episode">Episode One: New Friend</li>
-            <li class="episode"><em>Episode locked, play previous episodes to unlock!</em></li>
-            <li class="episode"><em>Episode locked, play previous episodes to unlock!</em></li>
-            <li class="episode"><em>Episode locked, play previous episodes to unlock!</em></li>
-        </div>
-      </ul>
-
-
-        <!--navigation bar at the bottom-->
-        <nav>
-            <ul class="bot-nav">
-
-                <li>
-                    <a href="workshop.html">
-                        <img src="../images/workshop.png" alt="workshop" class="bot-nav-elements">
-                    </a>
-                </li>
-
-                <li>
-                    <a href="shelf.html">
-                        <img src="../images/shelf.png" alt="shop" class="bot-nav-elements">
-                    </a>
-                </li>
-
-                <li>
-                    <a href="index.html">
-                        <img src="../images/house.png" alt="shop" class="bot-nav-elements">
-                    </a>
-                </li>
-
-            </ul>
-        </nav>
-
-
-
-        <script src="../js/script.js"></script>
-    </body>
-
-
+</body>
 </html>
