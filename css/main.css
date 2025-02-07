@@ -19,8 +19,18 @@ img {
 #scrapbot-logo {
     width:300px
 }
-/* Fullscreen Pages */
-.intro-page, .scrapbot-page, .signin-page {
+.scrapbot-page, .signin-page {
+    background: url('../images/abandonedfactorybg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* intro Page */
+.intro-page {
     background: black;
     color: white;
     height: 100vh;
@@ -30,17 +40,26 @@ img {
     align-items: center;
 }
 
-/* Fade-in Elements */
-#intro-text, #scrapbot-page-logo, .next-link {
+/* Fade-in */
+#intro-text, #scrapbot-page-logo, #ssss-logo, .next-link {
     opacity: 0;
     visibility: hidden;
     transition: opacity 2s ease-in-out;
 }
 
+#ssss-logo {
+    width: 400px; 
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 #intro-text {
     font-size: 3rem;
     position: absolute;
-    top: 50%; 
+    align-items: center;
+    top: 60%; 
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -50,7 +69,33 @@ img {
 }
 
 /* Buttons */
-.next-link, .btn {
+.next-link {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    margin-top: 20px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.forgot-password {
+    color: white;
+    margin-bottom: 10px;
+}
+.forgot-password:hover {
+    color: rgb(84, 130, 255);
+    background: none;
+
+}
+.next-link:hover {
+    text-decoration: underline;
+}
+
+.btn {
     display: inline-block;
     font-size: 1.5rem;
     text-decoration: none;
@@ -61,21 +106,10 @@ img {
     transition: background 0.3s;
     margin-top: 20px;
 }
-
-.next-link:hover {
-    background: rgba(255, 255, 255, 0.4);
-}
-
-.btn {
-    font-size: 1.2rem;
-    background: lightgray;
-    padding: 10px 20px;
-    border-radius: 8px;
-}
-
 .btn:hover {
-    background: #0056b3;
+    background: rgb(84, 130, 255);;
 }
+
 
 /* Sign-in Form */
 .signin-form {
@@ -98,12 +132,12 @@ img {
 
 .signin-form input {
     background: #222;  
-    color: blue;
+    color: rgb(255, 255, 255);
     outline: none;
 }
 
 .signin-form button, .guest-btn {
-    background: lightgray;
+    background: rgb(192, 209, 255);
     color: black;
     font-weight: bold;
     cursor: pointer;
@@ -111,6 +145,6 @@ img {
 }
 
 .signin-form button:hover, .guest-btn:hover {
-    background: gray;
+    background: rgb(84, 130, 255);;
 }
 

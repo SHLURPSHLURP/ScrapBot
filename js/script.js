@@ -138,10 +138,24 @@ document.addEventListener("DOMContentLoaded", () => {
 function setupIntroAnimation() {
     console.log("Playing intro animation...");
   
+    const ssssLogo = document.getElementById("ssss-logo");
     const title = document.getElementById("intro-text");
     const scrapbotLogo = document.getElementById("scrapbot-page-logo");
     const nextButton = document.querySelector(".next-link");
-  
+    
+    setTimeout(() => {
+      if (ssssLogo) {
+          ssssLogo.style.visibility = "visible";
+          ssssLogo.style.opacity = "1";
+      }
+    }, 500);
+
+    setTimeout(() => {
+      if (ssssLogo) {
+        ssssLogo.style.opacity = "0";
+      }
+    }, 4000);
+
     setTimeout(() => {
         if (title) {
             title.style.visibility = "visible";
