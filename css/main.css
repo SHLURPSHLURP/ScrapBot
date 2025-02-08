@@ -12,7 +12,9 @@ html, body {
     min-height: 100vh;
     overflow-x: hidden; 
     background: white;  
-    padding-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    margin-bottom:0px;
 }
 body {
     font-family: 'Kaisei Decol', serif;    
@@ -101,11 +103,6 @@ body {
 }
 /*navigation bar fin*/
 
-
-img{
-    width: 80px;
-    height:auto;
-}
 
 
 
@@ -592,18 +589,6 @@ img{
 
 .play-button:hover { background: #ffad61; }
 
-
-
-
-
-
-
-
-
-
-
-
-
 /*home page code*/
 #scrap-number{
         background-color: rgba(255, 255, 255, 0.5); /* black with 50% opacity */
@@ -616,9 +601,9 @@ img{
 /*for door image link*/
 #door{ 
     position: fixed;
-    top:160px;
-    left:550px;
-    width:420px;
+    top:200px;
+    left:629px;
+    width:400px;
     cursor: pointer;
 }
 
@@ -627,49 +612,50 @@ img{
 }
 /*fin door image link*/
 
-/*diorama canvas background*/
-#diorama-canvas{
-    position: fixed; /* Keeps the container fixed even when scrolling */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    
-    display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically */
-}
 
-#diorama-canvas img{
-    width: 100%; /* Adjust size */
-    height: auto; /* Maintain aspect ratio */
-}
 
-/*fim diorama canvas background*/
-
-/*for edit diorama button*/
-#edit-save-dio{
-    position: fixed;
-    top: 92%;
-    left:88%;
-    background-color:rgb(79, 122, 196);/* black with 50% opacity */
-    color: rgb(255, 255, 255); /* text color */
-    padding: 5px 10px; /* space inside the box */
-    border-radius: 5px; /* rounded corners */
-    display: inline-block; /* makes the box wrap around the text */
-}
-
-#edit-save-dio:hover{
-    transform:scale(1.05);
-    background-color:rgb(36, 77, 148)
-}
 /*fin edit diorama button*/
+
+/* Side-by-side layout for diorama.html */
+#diorama-container {
+    display: flex;
+    height: 521px;
+    width:100%;
+    position:fixed;
+}
+
+#figurine-library {
+    width: 200px;
+    /* Adjust as needed */
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+#diorama-canvas {
+    flex-grow: 1;
+    width: 100%; /* Full width */
+    height: 521px; /* Full height */
+    position: relative;
+    background-image: url("../images/warehouse.jpg"); /* Set the warehouse as background */
+    background-size: cover;
+    background-position: center;
+}
+
+
+#figurine-library img{
+    width:80px;
+}
+
+img{
+    width:120px;}
+
+
 
 .text-link{
     text-decoration:none;
 
 }
-
 
 
 /* For WebKit browsers (Chrome, Safari, Edge) */
