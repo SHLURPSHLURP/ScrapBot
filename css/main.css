@@ -26,6 +26,8 @@ body {
     padding-top: 60px;
 }
 
+
+/*navigation bar*/
 .top-nav {
     display: flex;
     justify-content: space-between; /* pushes elements to either end */
@@ -97,10 +99,20 @@ body {
     width: 60px;
     height: auto;
 }
+/*navigation bar fin*/
+
+
+img{
+    width: 80px;
+    height:auto;
+}
+
+
 
 #scrapbot-logo {
     width:300px
 }
+
 .scrapbot-page, .signin-page {
     background: url('../images/abandonedfactorybg.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -478,3 +490,87 @@ body {
 
 .play-button:hover { background: #ffad61; }
 
+
+
+
+
+
+
+
+
+
+
+
+
+/*home page code*/
+#scrap-number{
+        background-color: rgba(255, 255, 255, 0.5); /* black with 50% opacity */
+        color: rgb(0, 0, 0); /* text color */
+        padding: 5px 10px; /* space inside the box */
+        border-radius: 5px; /* rounded corners */
+        display: inline-block; /* makes the box wrap around the text */
+}
+
+/*for door image link*/
+#door{ 
+    position: fixed;
+    top:160px;
+    left:550px;
+    width:420px;
+    cursor: pointer;
+}
+
+#door:hover{
+    transform: scale(1.05);
+}
+/*fin door image link*/
+
+/*diorama canvas background*/
+#diorama-canvas{
+    position: fixed; /* Keeps the container fixed even when scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+}
+
+#diorama-canvas img{
+    width: 100%; /* Adjust size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/*fim diorama canvas background*/
+
+/*for edit diorama button*/
+#edit-save-dio{
+    position: fixed;
+    top: 92%;
+    left:88%;
+    background-color:rgb(79, 122, 196);/* black with 50% opacity */
+    color: rgb(255, 255, 255); /* text color */
+    padding: 5px 10px; /* space inside the box */
+    border-radius: 5px; /* rounded corners */
+    display: inline-block; /* makes the box wrap around the text */
+}
+
+#edit-save-dio:hover{
+    transform:scale(1.05);
+    background-color:rgb(36, 77, 148)
+}
+/*fin edit diorama button*/
+
+.text-link{
+    text-decoration:none;
+
+}
+
+
+
+/* For WebKit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    display: none;
+}
