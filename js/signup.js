@@ -1,6 +1,5 @@
 //sign in/sign up page--> restDB and API, modified week 13 CA code//
 
-
 //[STEP 0]: Make sure our document is A-OK
 document.addEventListener("DOMContentLoaded", function () {
     const APIKEY = "679f63fe74defacf0a181f2b";
@@ -17,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let password = document.getElementById("signup-password").value;
 
         //checking if email exists in data base
-        fetch(`${RESTDBURL}?q={"email": "${email}"}`, {
+        fetch(`${RESTDBURL}?q={"email":"${email}"}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -46,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
             .then(data => {
                 if (data) {
                     alert("Sign-up successful! You can now log in :)");
-                    window.location.href = "signIn.html"; // redirect to sign-in page
+                    window.location.href = "index.html"; // redirect to homepage page
                 } else {
                     alert("Sign-up failed, Try again :( ");
                 }

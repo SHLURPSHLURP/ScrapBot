@@ -21,7 +21,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow-x: hidden; 
+    justify-content: center;
     width: 100%;
     padding-top: 60px;
 }
@@ -110,7 +110,8 @@ img{
 
 
 #scrapbot-logo {
-    width:300px
+    width:150px;
+    margin-top: 10px;
 }
 
 .scrapbot-page, .signin-page {
@@ -122,7 +123,7 @@ img{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 30px;
+    padding-top: 50px;
 }
 /* intro Page */
 .intro-page {
@@ -291,7 +292,17 @@ img{
 
 
 /* Sign-in page */
-
+.signin-page, .signup-page, .forgot-password-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    background: url('../images/abandonedfactorybg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    padding-top: 40px;
+}
 .forgot-password {
     color: white;
     margin-bottom: 10px;
@@ -308,35 +319,126 @@ img{
     gap: 10px;
     width: 90%;
     max-width: 300px;
+    padding-top: 50px;}
+
+/* forget password page */
+.forgot-password-form {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 350px;
+    margin-top: 20px;
 }
 
-.signin-form input, .signin-form button, .guest-btn {
+.forgot-password-form h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.forgot-password-form p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.forgot-password-form input {
     width: 100%;
     padding: 10px;
     font-size: 1rem;
+    background: #222;
+    color: white;
+    border: 1px solid #444;
     border-radius: 5px;
-    text-align: center;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+.forgot-password-form button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    background: rgb(192, 209, 255);
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
     border: none;
 }
 
-.signin-form input {
-    background: #222;  
-    color: rgb(255, 255, 255);
+.forgot-password-form button:hover {
+    background: rgb(84, 130, 255);
+}
+
+.forgot-password-form {
+        width: 95%;
+}
+
+/*sign up page */
+#signup-form, .signin-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 90%;
+    max-width: 350px;
+    background: rgba(0, 0, 0, 0.8); 
+    padding: 25px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+
+#signup-form input, .signin-form input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    background: #222;
+    color: white;
+    border: 1px solid #444;
+    border-radius: 5px;
     outline: none;
 }
-
-.signin-form button, .guest-btn {
-    background: rgb(192, 209, 255);
-    color: black;
+.signinbtn, .signin-form button, .guest-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
     font-weight: bold;
+    background: rgb(171, 205, 254);
+    color: black;
     cursor: pointer;
+    border-radius: 5px;
     transition: 0.3s;
+    border: none;
 }
 
-.signin-form button:hover, .guest-btn:hover {
-    background: rgb(84, 130, 255);;
+.signinbtn:hover {
+    background: rgb(233, 239, 255);
 }
 
+/* switch to signin button */
+.switchbtn {
+    width: 100%!important; 
+    padding: 10px!important;
+    font-size: 0.9rem!important; 
+    font-weight: normal!important; 
+    background: rgba(192, 209, 255, 0.4)!important; 
+    color: white!important;
+    border: 1px solid rgb(192, 209, 255)!important; 
+    border-radius: 4px!important; 
+    text-align: center!important;
+    cursor: pointer!important;
+    transition: background 0.3s ease-in-out, color 0.3s!important;
+    display: flex!important;
+    justify-content: center!important;
+    align-items: center!important;
+}
+.switchbtn:hover {
+    background: rgba(192, 209, 255, 0.6)!important; 
+    color: black!important;
+}
 /* episode select */
 .episode-select-page {
     background: url('../images/grassbg.jpg') no-repeat center center fixed;
