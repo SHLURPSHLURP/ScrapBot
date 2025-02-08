@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const RESTDBURL = "https://scrapbot-e2fb.restdb.io/rest/contact";
     
     // sign in as guest//
-    const guestBtn = document.getElementById("guest-signin");
+    const guestBtn = document.querySelector(".guest-btn");    
     if (guestBtn) {
         guestBtn.addEventListener("click", () => {
             alert("Signed in as Guest!");
