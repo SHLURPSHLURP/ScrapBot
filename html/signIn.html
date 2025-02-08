@@ -17,15 +17,15 @@
 
         <img src="../images/scrapbot_logo.jpg" alt="ScrapBot Logo" id="scrapbot-logo">
 
-        <h1>Scrapbot</h1>
 
-        <form class="signin-form">
-            <input type="text" placeholder="Username" required>
-            <input type="password" placeholder="Password" required>
-            <button type="submit">Sign In</button>
-            <a href="#" class="forgot-password">Forgot Password?</a>
-            <button type="button" class="guest-btn" id="guest-signin">Sign in as Guest</button>
-        </form>
+        <div class="signin-form">
+            <input type="email" id="contact-email" placeholder="Email" required>
+            <input type="password" id="contact-password" placeholder="Password" required>
+            <button type="submit" id="contact-submit" class="signinbtn">Sign In</button>
+            <button type="button" class="guest-btn">Sign in as Guest</button>
+            <a href="#" class="forgot-password" onclick="location.href='forgotPassword.html'">Forgot Password?</a>
+            <button type="button" class="switchbtn" onclick="location.href='signup.html'">Create an account instead</button>
+        </div>
         <script defer src="../js/signin.js"></script>
     </body>
 </html>

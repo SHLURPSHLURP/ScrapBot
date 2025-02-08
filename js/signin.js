@@ -4,7 +4,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const APIKEY = "679f63fe74defacf0a181f2b";
     const RESTDBURL = "https://scrapbot-e2fb.restdb.io/rest/contact";
-  
+    
     // sign in as guest//
     const guestBtn = document.getElementById("guest-signin");
     if (guestBtn) {
@@ -13,8 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
             window.location.href = "index.html"; 
         });
     }
-  });
-    
+
     document.getElementById("contact-submit").addEventListener("click", function (e) {
         // Prevent default action of the button
         e.preventDefault(); 
@@ -22,11 +21,16 @@ document.addEventListener("DOMContentLoaded", function () {
         //[STEP 2]: Let's retrieve form data
         // For now, we assume all information is valid
         // You are to do your own data validation
-        let email = document.getElementById("contact-email").value;
-        let password = document.getElementById("contact-password").value;
+        let email = document.getElementById("contact-email").value.trim();
+        let password = document.getElementById("contact-password").value.trim();
+
+        if (!email || !password) {
+            alert("Please enter both email and password.");
+            return;
+        }
 
         //checking if email exists in data base
-        fetch(`${RESTDBURL}?q={"email": "${email}"}`, {
+        fetch(`${RESTDBURL}?q={"email":"${email}"}`, { 
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -48,3 +52,4 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("An error occurred, Please try again! :( ");
         });
     });
+});
