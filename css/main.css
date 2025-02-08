@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;700&display=swap');
 
-/* General Styling */
+/* general Styling */
 * {
     margin: 0;
     padding: 0;
@@ -28,7 +28,7 @@ body {
 
 .top-nav {
     display: flex;
-    justify-content: space-between; /* Pushes elements to either end */
+    justify-content: space-between; /* pushes elements to either end */
     align-items: center;
     background: #f9c978;
     padding: 10px 20px;
@@ -46,34 +46,39 @@ body {
     gap: 10px; 
 }
 
-/* Ensure profile and user info are aligned */
+/* ensure profile and user info are aligned */
 #profile-scrap {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-/* Profile picture */
+/* profile picture */
 #profile-pic {
     width: 40px;
     border-radius: 50%;
 }
 
-/* Scrap counter */
+/* scrap counter */
 #scrap-counter {
     display: flex;
     align-items: center;
     gap: 5px;
 }
 
-/* Navigation */
+#scrap-counter img{
+    width: 60px;
+    height: auto;
+}
+
+/* navigation */
 #navigation {
     display: flex;
     align-items: center;
-    gap: 10px; /* Space between nav items */
+    gap: 10px; /* space between nav items */
 }
 
-/* Ensuring images in navigation are correctly displayed */
+/* ensuring images in navigation are correctly displayed */
 #navigation img {
     width: auto;
     height: 55px;}
@@ -81,6 +86,11 @@ body {
 .icon {
     width: 55px;
     height: auto;
+    transform: translate(-10px);
+}
+
+.icon:hover{
+    transform: translate(-10px) scale(1.2); /* scale the text to make it larger when mouse hovers*/
 }
 
 #profile-pic{
