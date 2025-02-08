@@ -12,6 +12,7 @@ html, body {
     min-height: 100vh;
     overflow-x: hidden; 
     background: white;  
+    padding-top: 30px;
 }
 body {
     font-family: 'Kaisei Decol', serif;    
