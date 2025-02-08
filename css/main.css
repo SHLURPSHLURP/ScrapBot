@@ -12,7 +12,7 @@ html, body {
     min-height: 100vh;
     overflow-x: hidden; 
     background: white;  
-    padding-top: 30px;
+    padding-top: 20px;
 }
 body {
     font-family: 'Kaisei Decol', serif;    
@@ -28,10 +28,10 @@ body {
 
 .top-nav {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between; /* Pushes elements to either end */
     align-items: center;
     background: #f9c978;
-    padding: 10px 15px;
+    padding: 10px 20px;
     width: 100%;
     position: fixed;
     top: 0;
@@ -40,54 +40,54 @@ body {
     z-index: 1000;
 }
 
-.top-nav li {
-    display: flex;
-    align-items: center;
-}
-.top-nav .profile {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-#profile-pic {
-    width: 40px;
-    border-radius: 50%;
-}
 #profile-and-user {
     display: flex;
     align-items: center;
     gap: 10px; 
 }
 
-.nav-icons {
+/* Ensure profile and user info are aligned */
+#profile-scrap {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 }
 
-.settings, #scraps {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
+/* Profile picture */
+#profile-pic {
+    width: 40px;
+    border-radius: 50%;
 }
 
-
+/* Scrap counter */
 #scrap-counter {
     display: flex;
     align-items: center;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    gap: 5px; 
-    font-weight: bold;
-    text-align: center;
+    gap: 5px;
 }
 
-img {
-    width: 50px;
+/* Navigation */
+#navigation {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between nav items */
+}
+
+/* Ensuring images in navigation are correctly displayed */
+#navigation img {
+    width: auto;
+    height: 55px;}
+
+.icon {
+    width: 55px;
     height: auto;
 }
+
+#profile-pic{
+    width: 60px;
+    height: auto;
+}
+
 #scrapbot-logo {
     width:300px
 }
