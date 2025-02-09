@@ -454,12 +454,54 @@ body {
     margin-top: 50px;
     justify-content: center;
 }
+.upcoming {
+    cursor: pointer;
+    opacity: 0.8; 
+    text-align: center;
+}
+
+.upcoming .play-button {
+    background: gray; 
+    cursor: not-allowed;
+}
+.coming-soon {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 20px;
+}
+/* coming soon box below */
+.coming-soon-box {
+    background: rgba(100, 100, 100, 0.2); 
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px; 
+    font-size: 1.5rem;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.coming-soon-box h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    
+}
+
+.coming-soon-box p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    
+}
 
 .chapter-card {
     background: white;
     border-radius: 15px;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
     text-align: center;
     display: flex;
@@ -468,7 +510,7 @@ body {
     max-width: 350px;
     height: 100%;
     min-height: 680px;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .chapter-card:hover {
@@ -535,7 +577,6 @@ body {
     position: relative;
     z-index: 10;  
     padding: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
 }
 .section-divider {
     width: 100%;
@@ -588,6 +629,129 @@ body {
 }
 
 .play-button:hover { background: #ffad61; }
+
+/*episode 1 */
+.page-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: url('../images/grassbg.jpg') no-repeat center center/cover;
+    background-size: cover;
+    transition: background-image 0.5s ease-in-out;
+    cursor: pointer; 
+}
+
+/* back to main */
+.epnav {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    z-index: 1;
+}
+
+.epnav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.epnav a:hover {
+    text-decoration: underline;
+}
+
+#character-image {
+    position: absolute;
+    bottom: 15%;
+    width: 200px; 
+    height: auto;
+    display: none;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.character-left {
+    left: 10%;
+    transform: translateX(0);
+}
+
+.character-middle {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#dialogue-box {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 700px;
+    background: rgba(50, 25, 10, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    display: none; 
+    transition: opacity 0.5s ease-in-out;
+}
+
+.dialogue-name {
+    font-weight: bold;
+    color: #ffdd90;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.click-to-continue {
+    position: absolute;
+    bottom: 10px;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    animation: blink 1.5s infinite alternate;
+    z-index: 1;
+    pointer-events: none; 
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+
+#dark-overlay {
+    opacity: 1; 
+}
+
+.chapter-content {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    background: rgba(0, 0, 0, 0.6); 
+    padding: 20px;
+    border-radius: 10px;
+    transition: opacity 0.8s ease-in-out; 
+    opacity: 0; 
+}
+
+.chapter-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.chapter-content h2 {
+    font-size: 2rem;
+    font-weight: normal;
+}
 
 /*home page code*/
 #scrap-number{
