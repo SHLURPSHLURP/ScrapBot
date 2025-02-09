@@ -1038,8 +1038,17 @@ ul{
 
 /*workshop page- BOTH FIG AND DIO fin*/
 
+#info{
+    z-index:1000;
+    position:fixed;
+    width:50px;
+    top:15%;
+    left:95%;
+}
 
-
+#info:hover{
+    transform:scale(1.05,1.05);
+}
 
 
 
