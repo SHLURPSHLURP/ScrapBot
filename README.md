@@ -71,9 +71,6 @@ FIGMA link (toggle low fidelity and high fidelity in pages): https://www.figma.c
 
 ## Technologies Used
 
-- [JQuery](https://jquery.com)
-    - The project uses **JQuery** to simplify DOM manipulation.
-
 -[RestDB] (https://restdb.io)
     -the projects uses restDB for its API and its database (for sign in/sign up)
 
