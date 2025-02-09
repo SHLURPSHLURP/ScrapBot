@@ -1080,21 +1080,6 @@ ul{
 
 }
 
-#decor-block{
-    background-color: rgb(118, 190, 210);
-    display:flex;
-    flex-grow:1;
-    flex-direction:row;
-    flex-wrap: wrap;
-    width:60%;
-    height:150%;
-    position:absolute;
-    transform: translate(40%, 25%);
-    padding:3%;
-    align-items:center;
-    border-radius: 10px;
-    gap:30px;
-}
 
 .decor-buying-block img{
     width: 100px;
