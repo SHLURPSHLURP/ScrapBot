@@ -12,7 +12,6 @@ html, body {
     min-height: 100vh;
     overflow-x: hidden; 
     background: white;  
-    padding-top: 10px;
     padding-bottom: 0px;
     margin-bottom:0px;
 }
@@ -764,10 +763,10 @@ body {
 
 /*for door image link*/
 #door{ 
-    position: fixed;
-    top:200px;
-    left:629px;
-    width:400px;
+    position: absolute;
+    top:24%;
+    left: 42%;
+    width:35%;
     cursor: pointer;
 }
 
@@ -783,7 +782,7 @@ body {
 /* Side-by-side layout for diorama.html */
 #diorama-container {
     display: flex;
-    height: 521px;
+    height: 678px;
     width:100%;
     position:fixed;
 }
@@ -797,9 +796,8 @@ body {
 }
 
 #diorama-canvas {
-    flex-grow: 1;
     width: 100%; /* Full width */
-    height: 521px; /* Full height */
+    height: auto; /* Full height */
     position: relative;
     background-image: url("../images/warehouse.jpg"); /* Set the warehouse as background */
     background-size: cover;
@@ -810,17 +808,17 @@ body {
     z-index:1000;
     position:fixed;
     width:50px;
-    top:15%;
-    left:95%;
+    top:12%;
+    left:96%;
 }
 
 #info:hover{
-    transform:scale(1.05,1.05);
+    transform:scale(1.5,1.55);
 }
 
 
 #figurine-library img{
-    width:80px;
+    width:100px;
 }
 
 img{
@@ -855,7 +853,7 @@ img{
 }
 
 #settings-nav li a:hover, #workshop-nav li a:hover{
-    transform: scale(1,1.05);
+    transform: scale(1.08,1.08);
     background-color: #ff9431;
     color:white;
 }
@@ -900,7 +898,7 @@ img{
 }
 
 #mute-toggle:hover{
-    transform:scale(1,1.05);
+    transform:scale(1.08,1.08);
     background-color:rgb(76, 122, 146);
 }
 
@@ -942,7 +940,7 @@ img{
 }
 
 #sign-out-settings:hover{
-    transform:scale(1,1.05);
+    transform:scale(1.08,1.08);
     background-color:rgb(76, 122, 146);
 }
 /*settings page fin*/
@@ -1008,7 +1006,7 @@ ul{
 
 
 .fig-buying-block img{
-    width:160px;
+    width:200px;
 }
 
 .fig-buying-block, .decor-buying-block{
@@ -1045,13 +1043,90 @@ ul{
 }
 
 .decor-buying-block img{
-    width: 100px;
+    width: 130px;
 }
 /*workshop page- BOTH FIG AND DIO fin*/
 
 /*shelf page*/
-#big-shelf{
-    width:100%;
+#shelf-content{
+        background: url('../images/bigShelf.jpg') no-repeat center center fixed;
+        background-size: cover;
+        width: 100vw;
+        min-height: 100vh;
+        position:fixed;
+    
+}
+
+#shelf-figurines{
+    display:flex;
+    align-items: center;
+    gap:170px;
+    padding-top:120px;
+    padding-left:150px;
+    
+}
+
+#shelf-figurines img{
+    width:200px;
+}
+
+#shelf-figurines img:hover{
+    transform:scale(1.05,1.05)
+}
+/*shelf page fin*/
+/*figurine info page*/
+
+#figurine-info{
+    background-color: rgb(104,48,21);
+    background-size: cover;
+    width: 100vw;
+    min-height: 100vh;
+    display:flex;
+    justify-content:space-between;
+    position:fixed;
+    
+
+}
+
+#figurine-info h1{
+    color:white;
+}
+
+#sketchfab-embed-wrapper iframe{
+    display:flex;
+    
+}
+
+#figurine-desc{
+    display:flex;
+    flex-direction: column;
+    width:50%;
+    gap: 50px;
+    background-color: rgba(255, 255, 255, 0.397);
+    margin:100px;
+    padding:5%;
+    border-radius:10px;
+    
+
+}
+
+/*lottie page styling*/
+*,html{font-family: Arial, Helvetica, sans-serif;}
+.bg-blue{background: #000000;}
+.animation-center{  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*height: 100vh;*/ /*if we only want this item to be smack center*/
+ }
+.loading-text{
+    padding-top: 30px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    top: -50px;
+    position: relative;
+    font-style: italic;
 }
 
 

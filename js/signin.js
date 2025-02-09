@@ -10,7 +10,8 @@ document.addEventListener("DOMContentLoaded", function () {
     if (guestBtn) {
         guestBtn.addEventListener("click", () => {
             alert("Signed in as Guest!");
-            window.location.href = "index.html"; 
+            console.log('Login successful! Redirecting to transition page...');
+    window.location.href = "../html/signInLottie.html"; // Redirect to transition page after successful login
         });
     }
 
@@ -42,7 +43,8 @@ document.addEventListener("DOMContentLoaded", function () {
             if (users.length === 0) { //if the email is not found
                 alert("Email not found, Please sign up first! :( ");
             } else if (users[0].password === password) { //if email is found and passsword is correct
-                window.location.href = "../html/index.html"; // redirect to homepage
+                console.log('Login successful! Redirecting to transition page...');
+                window.location.href = "../html/signInLottie.html"; // Redirect to transition page after successful login
             } else {
                 alert("Wrong password! :( "); //password wrong
             }
