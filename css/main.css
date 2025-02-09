@@ -34,7 +34,7 @@ body {
     display: flex;
     justify-content: space-between; /* pushes elements to either end */
     align-items: center;
-    background: #f9c978;
+    background: rgb(255, 190, 120);
     padding: 10px 20px;
     width: 100%;
     position: fixed;
@@ -591,8 +591,8 @@ body {
 
 /*home page code*/
 #scrap-number{
-        background-color: rgba(255, 255, 255, 0.5); /* black with 50% opacity */
-        color: rgb(0, 0, 0); /* text color */
+        background-color: rgba(255, 255, 255, 0.5); /* box colour */
+        color: rgb(0, 0, 0); /* text colour */
         padding: 5px 10px; /* space inside the box */
         border-radius: 5px; /* rounded corners */
         display: inline-block; /* makes the box wrap around the text */
@@ -629,7 +629,7 @@ body {
     /* Adjust as needed */
     overflow-y: auto;
     background: rgba(0, 0, 0, 0.5);
-    padding: 10px;
+    padding: 5px;
 }
 
 #diorama-canvas {
@@ -657,8 +657,231 @@ img{
 
 }
 
+/*settings navigation bar*/
+#settings-nav li a, #workshop-nav li a{
+    background-color:rgb(255, 190, 120); /* box colour */
+    color: rgb(0, 0, 0); /* text colour */
+    padding: 5px 10px; /* space inside the box */
+    border-radius: 5px; /* rounded corners */
+    display: inline-block; /* makes the box wrap around the text */
+}
+#settings-nav, #workshop-nav {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style-type: none;
+    position: fixed;
+    top: 100px; /* Adjust distance from the top */
+    left: 10px; /* Adjust distance from the left */
+    gap: 10px; /* Controls the space between words */
+    font-size: 18px; /* Adjust size if needed */
+    z-index: 1000; /*Ensures it is on top of everything*/
+}
 
-/* For WebKit browsers (Chrome, Safari, Edge) */
+#settings-nav li a:hover, #workshop-nav li a:hover{
+    transform: scale(1,1.05);
+    background-color: #ff9431;
+    color:white;
+}
+
+/*settings navigation bar fin*/
+
+/*settings page*/
+#settings-block{
+    background-color: rgb(255, 231, 187);
+    display:flex;
+    flex-direction:column;
+    width:60%;
+    height:100%;
+    position:absolute;
+    transform: translate(40%, 10%);
+    padding:3%;
+    align-items:center;
+    border-radius: 10px;
+    gap:30px;
+}
+
+#music-control{
+    display:flex;
+    flex-direction:row;
+
+}
+
+#music-control-text{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    gap:7px;
+
+}
+
+#mute-toggle {
+    background-color:rgb(99, 161, 192);
+    border: white;
+    color:rgb(255, 255, 255);
+    padding:3px;
+    border-radius:5px;
+}
+
+#mute-toggle:hover{
+    transform:scale(1,1.05);
+    background-color:rgb(76, 122, 146);
+}
+
+
+
+#universal-nav{
+    display:flex;
+    flex-direction:row; /*left to right*/
+    flex-wrap:wrap; /*excess lines wrap to bottom line*/
+    justify-content:center;
+    font-size:12px;
+    padding:25px;
+}   
+
+#universal-nav li{
+    margin-right:20px;
+    margin-bottom: 6px;
+    white-space: nowrap; /*one line (point) doesnt wrap; one row from left to right*/
+}
+
+#universal-nav li a{
+    color:rgb(61, 109, 139);
+}
+
+#universal-nav li a:hover{
+    color:rgb(255, 255, 255);
+}
+
+
+#sign-out-settings{
+    background-color:rgb(99, 161, 192);
+
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-left: 5px;
+    padding-right:5px;
+    border-radius:5px;
+    color:white;
+}
+
+#sign-out-settings:hover{
+    transform:scale(1,1.05);
+    background-color:rgb(76, 122, 146);
+}
+/*settings page fin*/
+
+/*contact us page*/
+
+ul{
+    list-style: none;
+}
+
+.contact-line{
+    display:flex;
+    flex-direction:row;
+    gap:5px;
+  
+}
+
+
+.contact-line li img{
+    width:50px;
+}
+
+.contact-line li a{
+    color:black;
+    display:flex;
+    padding-top:17px;
+}
+
+#contact-title{
+    display:flex;
+    flex-direction: column;
+}
+
+#contact-title img{
+    width: 200px;
+}
+
+#contact-title{
+    color:rgb(70, 135, 176);
+    font-size:larger;
+}
+
+/*contact us page fin*/
+
+
+
+/*workshop page- BOTH FIG AND DIO*/
+#workshop-block{
+    background-color: rgb(118, 190, 210);
+    display:flex;
+    flex-grow:1;
+    flex-direction:row;
+    flex-wrap: wrap;
+    width:60%;
+    height:100%;
+    position:absolute;
+    transform: translate(40%, 10%);
+    padding:3%;
+    align-items:center;
+    border-radius: 10px;
+    gap:30px;
+}
+
+
+.fig-buying-block img{
+    width:160px;
+}
+
+.fig-buying-block, .decor-buying-block{
+    display:flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius:10px;
+    padding:3%;
+}
+
+.fig-buying-block p, .decor-buying-block p{
+    background-color:rgb(255, 190, 120); /* box colour */
+    color: rgb(255, 255, 255); /* text colour */
+    padding: 5px 10px; /* space inside the box */
+    border-radius: 5px; /* rounded corners */
+    display: inline-block; /* makes the box wrap around the text */
+
+}
+
+#decor-block{
+    background-color: rgb(118, 190, 210);
+    display:flex;
+    flex-grow:1;
+    flex-direction:row;
+    flex-wrap: wrap;
+    width:60%;
+    height:150%;
+    position:absolute;
+    transform: translate(40%, 25%);
+    padding:3%;
+    align-items:center;
+    border-radius: 10px;
+    gap:30px;
+}
+
+.decor-buying-block img{
+    width: 100px;
+}
+
+/*workshop page- BOTH FIG AND DIO fin*/
+
+
+
+
+
+
+
+
+/* For WebKit browsers (Chrome, Safari, Edge)- AI ASSISTED */
 ::-webkit-scrollbar {
     display: none;
 }
