@@ -35,7 +35,12 @@ document.addEventListener("DOMContentLoaded", () => {
         { 
             background: "../images/cityruinsbg.jpg",
             character: "",
-            text: "Its metal feet crunch over cracked pavement as it scans the horizon. Rusted streetlights loom like skeletal remains."
+            text: "Its metal feet crunch over cracked pavement as it scans the horizon. Rusted streetlights loom like skeletal remains. A faded \"City Ruins\" sign sways in the wind, barely clinging to its post."
+        },
+        { 
+            background: "../images/cityruinsbg.jpg",
+            character: "",
+            text: "Beneath the rubble lies a rusted, stubby machine—round-bodied, with mechanical arms and faded optics.One leg is bent, servos sparking. It twitches weakly but makes no sound."
         },
         { 
             background: "../images/cityruinsbg.jpg",
@@ -50,6 +55,11 @@ document.addEventListener("DOMContentLoaded", () => {
             position: "right",
             name: "???",
             text: "The machine doesn't respond. It slowly turns its head, staring at ScrapBot with faded optics."
+        },
+        { 
+            background: "../images/cityruinsbg.jpg",
+            character: "",
+            text: "ScrapBot hesitates, then carefully lifts the heavy, stubby robot onto its back. Its servos strain under the weight, but it refuses to leave it behind."
         },
         {
             background: "../images/warehouse.jpg",

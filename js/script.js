@@ -204,5 +204,32 @@ function setupIntroAnimation() {
         }
     }, 7000);
   }
-  
-  
+  // workshop dio buying popup
+  document.addEventListener("DOMContentLoaded", function () {
+    const buyButtons = document.querySelectorAll(".fig-buying-block p, .decor-buying-block p"); 
+    const popup = document.getElementById("buy-popup");
+    const overlay = document.getElementById("popup-overlay");
+    const confirmButton = document.getElementById("confirm-btn");
+
+
+    buyButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            if (this.textContent.trim() !== "Locked") {
+                popup.style.display = "block";
+                overlay.style.display = "block";
+            }
+        });
+    });
+
+    overlay.addEventListener("click", function () {
+        popup.style.display = "none";
+        overlay.style.display = "none";
+    });
+
+    // successful alrt
+    confirmButton.addEventListener("click", function () {
+        alert("Purchase successful!");
+        popup.style.display = "none";
+        overlay.style.display = "none";
+    });
+});

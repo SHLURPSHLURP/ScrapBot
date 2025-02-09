@@ -990,33 +990,87 @@ ul{
 
 
 /*workshop page- BOTH FIG AND DIO*/
-#workshop-block{
+#workshop-block, #decor-block {
     background-color: rgb(118, 190, 210);
-    display:flex;
-    flex-grow:1;
-    flex-direction:row;
+    display: flex;
     flex-wrap: wrap;
-    width:60%;
-    height:100%;
-    position:absolute;
-    transform: translate(40%, 10%);
-    padding:3%;
-    align-items:center;
+    justify-content: center;
+    align-items: flex-start; 
+    width: 60%;
+    min-height: 100vh;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8% 3% 3%; 
     border-radius: 10px;
-    gap:30px;
+    gap: 20px;
+    box-sizing: border-box;
+}
+.fig-buying-block img,  .decor-buying-block img{
+    width: 120px;
+    max-height: 120px;
+    margin-bottom: 10px;
+    object-fit: contain;
 }
 
-
-.fig-buying-block img{
-    width:160px;
-}
-
-.fig-buying-block, .decor-buying-block{
-    display:flex;
+.fig-buying-block, .decor-buying-block {
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: white;
-    border-radius:10px;
-    padding:3%;
+    border-radius: 10px;
+    padding: 15px;
+    width: 200px;
+    height: 260px;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.fig-buying-block:hover, .decor-buying-block:hover {
+    transform: scale(1.05);
+}
+#buy-popup p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+#buy-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+}
+
+#popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+#confirm-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+#confirm-btn:hover {
+    background-color: #45a049;
 }
 
 .fig-buying-block p, .decor-buying-block p{
@@ -1025,28 +1079,15 @@ ul{
     padding: 5px 10px; /* space inside the box */
     border-radius: 5px; /* rounded corners */
     display: inline-block; /* makes the box wrap around the text */
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    width: 80%;
+    cursor: pointer;
 
 }
 
-#decor-block{
-    background-color: rgb(118, 190, 210);
-    display:flex;
-    flex-grow:1;
-    flex-direction:row;
-    flex-wrap: wrap;
-    width:60%;
-    height:150%;
-    position:absolute;
-    transform: translate(40%, 25%);
-    padding:3%;
-    align-items:center;
-    border-radius: 10px;
-    gap:30px;
-}
 
-.decor-buying-block img{
-    width: 100px;
-}
 /*workshop page- BOTH FIG AND DIO fin*/
 
 /*shelf page*/
@@ -1059,4 +1100,29 @@ ul{
 /* For WebKit browsers (Chrome, Safari, Edge)- AI ASSISTED */
 ::-webkit-scrollbar {
     display: none;
+}
+
+/*responsive */
+@media (max-width: 768px) {
+    .epnav {
+        padding: 8px;
+    }
+    .epnav a {
+        font-size: 0.9rem;
+    }
+    #character-image {
+        max-width: 180px;
+    }
+    #dialogue-box {
+        font-size: 1.3rem;
+        width: 95%;
+    }
+    .click-to-continue {
+        font-size: 0.8rem;
+    }
+
+    .play-button {
+        padding: 14px;
+        font-size: 1.1rem;
+    }
 }
