@@ -806,6 +806,18 @@ body {
     background-position: center;
 }
 
+#info{
+    z-index:1000;
+    position:fixed;
+    width:50px;
+    top:15%;
+    left:95%;
+}
+
+#info:hover{
+    transform:scale(1.05,1.05);
+}
+
 
 #figurine-library img{
     width:80px;
@@ -1035,22 +1047,12 @@ ul{
 .decor-buying-block img{
     width: 100px;
 }
-
 /*workshop page- BOTH FIG AND DIO fin*/
 
-#info{
-    z-index:1000;
-    position:fixed;
-    width:50px;
-    top:15%;
-    left:95%;
+/*shelf page*/
+#big-shelf{
+    width:100%;
 }
-
-#info:hover{
-    transform:scale(1.05,1.05);
-}
-
-
 
 
 
